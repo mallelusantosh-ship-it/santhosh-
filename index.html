@@ -1,0 +1,196 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIKERS — The Beginner's Guide to Motorcycles</title>
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-badge">B</span>
+        <span class="logo-text">BIKERS</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#types">Bike Types</a>
+        <a href="#models">Popular Models</a>
+        <a href="#features">Key Features</a>
+        <a href="#quiz" class="btn-nav">Find Your Bike</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Zero Jargon • 100% Beginner Friendly</span>
+        <h1>New to Motorcycles? Start Here.</h1>
+        <p>
+          <strong>BIKERS</strong> explains everything you need to know about two-wheelers—from different bike styles and popular beginner models to what terms like <em>CC</em>, <em>ABS</em>, and <em>Torque</em> actually mean on the road.
+        </p>
+        <div class="hero-buttons">
+          <a href="#types" class="btn btn-primary">Explore Bike Types</a>
+          <a href="#features" class="btn btn-secondary">Learn Bike Features</a>
+        </div>
+      </div>
+
+      <!-- Clean SVG Motorcycle Illustration -->
+      <div class="hero-visual">
+        <svg viewBox="0 0 420 220" class="bike-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="190" x2="400" y2="190" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+          <!-- Rear Wheel -->
+          <circle cx="105" cy="145" r="42" fill="#1e293b"/>
+          <circle cx="105" cy="145" r="26" fill="#f8fafc"/>
+          <circle cx="105" cy="145" r="10" fill="#ea580c"/>
+          <!-- Front Wheel -->
+          <circle cx="315" cy="145" r="42" fill="#1e293b"/>
+          <circle cx="315" cy="145" r="26" fill="#f8fafc"/>
+          <circle cx="315" cy="145" r="10" fill="#ea580c"/>
+          <!-- Frame & Forks -->
+          <line x1="105" y1="145" x2="185" y2="140" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
+          <line x1="315" y1="145" x2="275" y2="70" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
+          <!-- Engine -->
+          <rect x="175" y="110" width="65" height="42" rx="8" fill="#334155"/>
+          <circle cx="205" cy="132" r="12" fill="#94a3b8"/>
+          <!-- Fuel Tank -->
+          <path d="M180 95 C205 68, 250 70, 272 95 L250 112 L180 112 Z" fill="#ea580c"/>
+          <!-- Seat -->
+          <path d="M100 95 Q140 85 182 98 L175 112 L105 108 Z" fill="#0f172a"/>
+          <!-- Headlight & Handlebar -->
+          <circle cx="288" cy="78" r="10" fill="#facc15"/>
+          <path d="M265 65 L250 55" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <p class="visual-caption">Every motorcycle shares the same core parts—scroll down to learn them step by step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BIKE TYPES EXPLAINED -->
+  <section id="types" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>1. Types of Motorcycles</h2>
+        <p>Bikes are built for different jobs. Click a category below to see how you sit on it and whether it suits a beginner.</p>
+      </div>
+
+      <!-- Buttons injected by script.js -->
+      <div id="typeTabs" class="tabs-container"></div>
+
+      <!-- Active category info injected by script.js -->
+      <div id="typeDisplay" class="type-card"></div>
+    </div>
+  </section>
+
+  <!-- 4. POPULAR MODELS -->
+  <section id="models" class="section section-white">
+    <div class="container">
+      <div class="models-top">
+        <div class="section-header">
+          <h2>2. Popular Models Explained</h2>
+          <p>Real-world bikes known for easy handling, manageable power, and reliable everyday riding.</p>
+        </div>
+
+        <div class="filter-controls">
+          <input type="text" id="modelSearch" placeholder="Search bike name..." />
+          <select id="modelFilter">
+            <option value="All">All Categories</option>
+            <option value="Commuter">Commuter</option>
+            <option value="Naked / Street">Naked / Street</option>
+            <option value="Cruiser">Cruiser</option>
+            <option value="Sportbike">Sportbike</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Model cards injected by script.js -->
+      <div id="modelsGrid" class="cards-grid"></div>
+    </div>
+  </section>
+
+  <!-- 5. VEHICLE FEATURES GLOSSARY -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>3. Key Vehicle Features Decoded</h2>
+        <p>Spec sheets can look confusing. Read these plain-English explanations with everyday analogies.</p>
+      </div>
+
+      <!-- Feature cards injected by script.js -->
+      <div id="featuresGrid" class="cards-grid"></div>
+    </div>
+  </section>
+
+  <!-- 6. BEGINNER BIKE QUIZ -->
+  <section id="quiz" class="section section-dark">
+    <div class="container quiz-container">
+      <div class="quiz-header">
+        <span class="badge-dark">Interactive Helper</span>
+        <h2>Not Sure Which Bike Fits You?</h2>
+        <p>Answer 3 quick questions to find your ideal starter motorcycle category.</p>
+      </div>
+
+      <div class="quiz-box">
+        <div class="form-group">
+          <label for="q1">1. Where will you ride most often?</label>
+          <select id="q1">
+            <option value="city">Daily city traffic & short commutes</option>
+            <option value="weekend">Relaxed weekend highway rides</option>
+            <option value="sporty">Open roads & sporty cornering</option>
+            <option value="rough">Bumpy roads, potholes & rough terrain</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q2">2. What riding posture feels best to you?</label>
+          <select id="q2">
+            <option value="upright">Straight upright (like sitting in a chair)</option>
+            <option value="laidback">Laid-back with a low seat height</option>
+            <option value="lean">Slightly leaned forward for control</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q3">3. What matters most in your first bike?</label>
+          <select id="q3">
+            <option value="mileage">High mileage, light weight & low maintenance</option>
+            <option value="style">Classic look & relaxed comfort</option>
+            <option value="agility">Sharp handling & modern safety features</option>
+          </select>
+        </div>
+
+        <button id="quizBtn" class="btn btn-primary btn-full">Recommend My Bike Type</button>
+
+        <div id="quizResult" class="quiz-result hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-title">BIKERS — Built for New Riders</p>
+      <p>Always wear a certified helmet, gloves, and protective gear on every ride.</p>
+    </div>
+  </footer>
+
+  <!-- 8. POPUP MODAL FOR BIKE DETAILS -->
+  <div id="modelModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Link to your external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
